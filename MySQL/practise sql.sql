@@ -197,7 +197,7 @@ limit 1;
  
  select * from rental;
  
- 
+ use sakila;
  
  #33 Show the total number of rentals for each month in 2005
  select monthname(rental_date) as month,
@@ -206,6 +206,14 @@ limit 1;
  where year(rental_date) =2005
  GROUP BY  month;
 
+
+#33 Show the total number of rentals for each month in 2005
+
+select monthname(rental_date) as  month,
+count(*) as rental_date
+from rental
+where year(rental_date)=2005
+group by month;
 
 
 SELECT monthname(rental_date) AS month,
